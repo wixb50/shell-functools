@@ -32,7 +32,7 @@ arguments to these commands.
 
 If you want to try it out on your own, run:
 ``` bash
-pip install shell-functools
+pip install git+https://github.com/wixb50/shell-functools.git
 ```
 
 If you only want to try it out temporarily, you can also use:
@@ -294,6 +294,10 @@ at idx              :: Array  → String
 index idx           :: Array  → String
 join separator      :: Array  → String
 split separator     :: String → Array
+```
+#### Func operations ####
+```
+func              :: String  → String
 ```
 #### Other operations ####
 ```

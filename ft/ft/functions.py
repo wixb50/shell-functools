@@ -389,3 +389,11 @@ def format(format_str, inp):
         panic("Incorrect format string '{}' for input '{}'.".format(
             format_str.value, inp)
         )
+
+
+@register("func")
+@typed(T_STRING, T_STRING)
+def func(code_str, inp):
+    namespace = dict()
+    exec("def func(inp):%s" % code_str.value, namespace)
+    return namespace['func'](inp)
